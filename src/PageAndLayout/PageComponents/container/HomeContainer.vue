@@ -1,8 +1,16 @@
-<script setup>
-import C2_TwoWayDataBinding from "./component/C2_TwoWayDataBinding.vue";
+<script>
 import C1_HelloVue from "./component/C1_HelloVue.vue";
+import C2_TwoWayDataBinding from "./component/C2_TwoWayDataBinding.vue";
 import C3_OptionAPI_LifeCycleHooks from "./component/C3_OptionAPI_LifeCycleHooks.vue";
 import C4_OptionAPI_Othermethods from "./component/C4_OptionAPI_Othermethods.vue";
+export default {
+  components: {
+    C1_HelloVue,
+    C2_TwoWayDataBinding,
+    C3_OptionAPI_LifeCycleHooks,
+    C4_OptionAPI_Othermethods,
+  },
+};
 </script>
 <template>
   <div class="container">

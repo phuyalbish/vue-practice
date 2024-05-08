@@ -1,9 +1,18 @@
-<script setup>
+<script>
 import PageLayout from "./PageLayout.vue";
+import HomeContainer from "./PageComponents/container/HomeContainer.vue";
 import Header from "./PageComponents/Header.vue";
-import Body from "./PageComponents/Body.vue";
 import Footer from "./PageComponents/Footer.vue";
 import Sidebar from "./PageComponents/Sidebar.vue";
+export default {
+  components: {
+    PageLayout,
+    HomeContainer,
+    Header,
+    Footer,
+    Sidebar,
+  },
+};
 </script>
 <template>
   <PageLayout>
@@ -14,7 +23,7 @@ import Sidebar from "./PageComponents/Sidebar.vue";
       <Sidebar />
     </template>
     <template #body>
-      <Body />
+      <HomeContainer />
     </template>
     <template #footer>
       <Footer />

@@ -13,6 +13,7 @@ export default {
 </script>
 <template>
   <div class="inputandoutput">
+    <p>{{ $store.state.navbarState }}</p>
     <h2>My name is {{ myname }} and I am {{ myage }} year's old</h2>
     <input class="input-field" v-model="myname" />
     <input class="input-field" type="number" v-model="myage" />

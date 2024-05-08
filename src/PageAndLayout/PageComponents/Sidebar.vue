@@ -12,9 +12,6 @@
   </div>
 </template>
 
-<script setup>
-// import { ref } from "vue";
-</script>
 <script>
 export default {
   data() {

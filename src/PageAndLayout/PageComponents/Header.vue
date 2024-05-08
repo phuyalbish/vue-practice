@@ -4,6 +4,7 @@
     <div class="header-items">Products</div>
     <div class="header-items">Category</div>
     <div class="header-items">Profile</div>
+    <div class="header-items">{{ getNavdata }}</div>
   </div>
 </template>
 <style>
@@ -22,3 +23,12 @@
   }
 }
 </style>
+<script>
+export default {
+  computed: {
+    getNavdata() {
+      return this.$store.state.navbarState;
+    },
+  },
+};
+</script>
