@@ -1,10 +1,37 @@
 <template>
   <div class="header-container">
-    <div class="header-items">Home</div>
-    <div class="header-items">Products</div>
-    <div class="header-items">Category</div>
-    <div class="header-items">Profile</div>
-    <div class="header-items">{{ getNavdata }}</div>
+    <div
+      :class="
+        getNavdata === 'home' ? 'header-items selectedNav' : 'header-items'
+      "
+      @click="changeNavbarState('home')"
+    >
+      Home
+    </div>
+    <div
+      :class="
+        getNavdata === 'product' ? 'header-items selectedNav' : 'header-items'
+      "
+      @click="changeNavbarState('product')"
+    >
+      Products
+    </div>
+    <div
+      :class="
+        getNavdata === 'category' ? 'header-items selectedNav' : 'header-items'
+      "
+      @click="changeNavbarState('category')"
+    >
+      Category
+    </div>
+    <div
+      :class="
+        getNavdata === 'profile' ? 'header-items selectedNav' : 'header-items'
+      "
+      @click="changeNavbarState('profile')"
+    >
+      Profile
+    </div>
   </div>
 </template>
 <style>
@@ -21,6 +48,11 @@
     background-color: black;
     color: #fff;
   }
+  .selectedNav {
+    background-color: black;
+
+    color: #fff;
+  }
 }
 </style>
 <script>
@@ -28,6 +60,11 @@ export default {
   computed: {
     getNavdata() {
       return this.$store.state.navbarState;
+    },
+  },
+  methods: {
+    changeNavbarState(nav_item) {
+      this.$store.state.navbarState = nav_item;
     },
   },
 };

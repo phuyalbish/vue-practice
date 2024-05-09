@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       items: [
-        { title: "Item1", bgColor: "grey", selected: false },
+        { title: "Item1", bgColor: "grey", selected: true },
         { title: "Item2", bgColor: "grey", selected: false },
         { title: "Item3", bgColor: "grey", selected: false },
         { title: "Item4", bgColor: "grey", selected: false },
