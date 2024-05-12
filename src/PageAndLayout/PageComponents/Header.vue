@@ -62,6 +62,9 @@ export default {
       return this.$store.state.navbarState;
     },
   },
+  mounted() {
+    console.log(this);
+  },
   methods: {
     changeNavbarState(nav_item) {
       this.$store.state.navbarState = nav_item;

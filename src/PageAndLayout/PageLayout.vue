@@ -21,6 +21,7 @@
 }
 #main-content {
   display: flex;
+
   background-color: cyan;
   width: 100%;
   border: 1px solid grey;

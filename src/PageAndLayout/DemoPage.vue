@@ -29,10 +29,10 @@ export default {
       <Sidebar />
     </template>
     <template #body>
-      <HomeContainer v-if="$store.state.navbarState === 'home'" />
-      <ProductContainer v-if="$store.state.navbarState === 'product'" />
-      <CategoryContainer v-if="$store.state.navbarState === 'category'" />
-      <ProfileContainer v-if="$store.state.navbarState === 'profile'" />
+      <HomeContainer v-show="$store.state.navbarState === 'home'" />
+      <ProductContainer v-show="$store.state.navbarState === 'product'" />
+      <CategoryContainer v-show="$store.state.navbarState === 'category'" />
+      <ProfileContainer v-show="$store.state.navbarState === 'profile'" />
     </template>
     <template #footer>
       <Footer />
